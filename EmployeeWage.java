@@ -16,17 +16,23 @@ public class EmployeeWage {
 		Random random = new Random();
 		int randomNum = random.nextInt(3);
 
-		if (randomNum == 1)
-		{
+		switch (randomNum) {
+		case 0:
+			System.out.println("Employee is Absent");
+			break;
+
+		case 1:
 			System.out.println("Employee is Present");
 			salary = wagePerHour * fullDayHours;
-		}
-		else if(randomNum == 2)
+			break;
+
+		case 2:
 			salary = wagePerHour * halfDayHours;
-		else
-			System.out.println("Employee is Absent");
-		
-		System.out.println("Employee salary is : "+salary);
+			break;
+		}
+
+		System.out.println("Employee salary is : " + salary);
+
 	}
 
 }
